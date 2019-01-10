@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  pad: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif; }
+
+.header {
+  width: 100%;
+  font-size: 0; }
+  .header__box {
+    height: 6rem;
+    background-color: #f75311; }
+    .header__box-location {
+      text-decoration: none;
+      line-height: 6rem;
+      font-size: 2.2rem;
+      color: #fff;
+      text-decoration: none;
+      margin-left: 3rem; }
+    .header__box-text {
+      position: relative;
+      font-weight: 400;
+      line-height: 6rem;
+      font-size: 2.2rem;
+      color: #fff;
+      text-decoration: none;
+      margin-left: 3rem; }
+      .header__box-text::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 2px;
+        border-bottom: 1px solid #fff; }
+  .header__menu {
+    min-height: 6rem;
+    background-color: #374249; }
+    .header__menu-list {
+      list-style: none;
+      padding: 0; }
+      .header__menu-list > * {
+        color: #fff;
+        font-size: 1.4rem;
+        text-align: center;
+        padding: 2rem; }
+
+.naslov {
+  width: 100%;
+  height: 20rem;
+  background-color: #000;
+  position: relative; }
+  .naslov__text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .naslov__text-1, .naslov__text-2 {
+      color: #fff;
+      text-align: center; }
+    .naslov__text-1 {
+      padding: 0 5rem;
+      font-size: 4.7rem; }
+    .naslov__text-2 {
+      font-size: 2rem;
+      font-weight: 300; }
+
+.filterbtns {
+  width: 100%;
+  height: 10rem;
+  position: relative;
+  text-align: center; }
+  .filterbtns__row {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 6rem;
+    width: 95%; }
+    .filterbtns__row-btn {
+      display: inline;
+      font-size: 1.4rem;
+      color: #797979;
+      border: 1px solid #797979;
+      padding: 1.3rem;
+      border-radius: 5rem;
+      margin: 1rem;
+      line-height: 6rem; }
+
+.section__offers {
+  background-color: #f3f7f9;
+  min-height: 30rem;
+  width: 100%; }
+  .section__offers .offers {
+    padding: 3rem 2.5rem; }
+    .section__offers .offers__element {
+      width: 100%;
+      height: 28rem;
+      margin-top: 3rem;
+      overflow: hidden;
+      position: relative; }
+      .section__offers .offers__element-img {
+        width: 100%; }
+      .section__offers .offers__element-opac {
+        width: 100%;
+        height: 45%;
+        background-color: rgba(243, 247, 249, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0; }
+      .section__offers .offers__element-opac > * {
+        font-size: 2.2rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        font-weight: 500; }
+
+.section-pricing {
+  width: 100%;
+  height: 30rem;
+  text-align: center;
+  position: relative; }
+  .section-pricing__naslov-1 {
+    font-size: 3.5rem;
+    margin-top: 3rem;
+    font-weight: 800; }
+  .section-pricing__naslov-2 {
+    font-size: 1.6rem;
+    margin-top: 7rem; }
+  .section-pricing__btn {
+    width: 24rem;
+    height: 7rem;
+    color: #797979;
+    border: 1px solid #797979;
+    padding: 1.5rem;
+    border-radius: 4rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .section-pricing__btn-text {
+      font-size: 2rem;
+      line-height: 4rem; }
+
+.section-map-form {
+  background-color: #f3f7f9;
+  min-height: 30rem;
+  width: 100%;
+  padding-bottom: 3rem; }
+  .section-map-form__text {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 5rem 0;
+    font-weight: 800; }
+  .section-map-form__map {
+    width: 80%;
+    min-height: 8rem;
+    margin: 0 10%; }
+    .section-map-form__map iframe {
+      width: 100%;
+      height: 50rem;
+      display: inline-block; }
+  .section-map-form__form {
+    width: 95%;
+    min-height: 43rem;
+    background-color: #f75311;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding-top: 1rem; }
+    .section-map-form__form-input {
+      display: block;
+      width: 95%;
+      margin: 3rem auto;
+      height: 5rem;
+      font-size: 2rem; }
+      .section-map-form__form-input:last-child {
+        height: 12rem;
+        padding-bottom: 9rem; }
+
+.footer {
+  width: 100%;
+  height: 5rem;
+  background-color: #374249;
+  color: #fff;
+  text-align: center;
+  line-height: 5rem; }
+  .footer__paragraph {
+    font-size: 1.4rem; }
+    .footer__paragraph span {
+      font-size: 1.4rem;
+      color: #f75311; }
+
+@media only screen and (min-width: 640px) {
+  .header {
+    width: 100%;
+    font-size: 0; }
+    .header > * {
+      display: inline-block;
+      vertical-align: top; }
+    .header__box {
+      width: 20%; }
+    .header__menu {
+      width: 80%; }
+      .header__menu-list > * {
+        display: inline-block; }
+
+  .naslov {
+    width: 100%;
+    height: 85vh;
+    background-image: url("../slike/intro.jpg");
+    background-size: cover; }
+    .naslov__text {
+      position: absolute;
+      top: 77%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      background-color: rgba(0, 0, 0, 0.5); } }
+.section__offers .offers {
+  padding: 3rem 2.5rem;
+  margin: 3rem 10rem; }
+  .section__offers .offers__element {
+    display: inline-block;
+    width: 23rem;
+    height: 28rem;
+    margin-left: 3rem;
+    position: relative; }
+    .section__offers .offers__element:hover .offers__element-opac {
+      display: block;
+      width: 100%;
+      height: 45%;
+      background-color: rgba(243, 247, 249, 0.7);
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .section__offers .offers__element-opac {
+      display: none; }
+
+.section-pricing {
+  width: 100%;
+  height: 30rem;
+  text-align: center;
+  position: relative; }
+  .section-pricing__naslov-1 {
+    font-size: 3.5rem;
+    margin-top: 3rem;
+    font-weight: 800; }
+  .section-pricing__naslov-2 {
+    font-size: 1.6rem;
+    margin-top: 7rem; }
+  .section-pricing__btn {
+    display: none; }
+  .section-pricing__table tr td {
+    color: #fff;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 1.3rem; }
+
+.orangebck {
+  background-color: #f75311;
+  border: 1px solid #797979; }
+
+.bluebck {
+  background-color: #374249;
+  border: 1px solid #797979; }
+
+.bordbluedark {
+  border: 1px solid #374249; }
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto; }
+
+table td.greytext {
+  border: 1px solid #797979;
+  color: #797979; }
+
+.pricbck {
+  border: 1px solid #f75311; }
+
+.section-map-form {
+  background-color: #f3f7f9;
+  min-height: 30rem;
+  width: 100%;
+  padding-bottom: 3rem; }
+  .section-map-form__text {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 5rem 0;
+    font-weight: 800; }
+  .section-map-form__map {
+    display: inline-block;
+    width: 30%;
+    height: 40rem;
+    margin: 0 10%;
+    vertical-align: top; }
+    .section-map-form__map iframe {
+      width: 100%;
+      height: 40rem; }
+  .section-map-form__form {
+    display: inline-block;
+    width: 40%;
+    height: 40rem;
+    background-color: #f75311;
+    margin: 0 auto;
+    padding-top: 1rem;
+    vertical-align: top; }
+    .section-map-form__form-input {
+      display: block;
+      width: 95%;
+      margin: 3rem auto;
+      height: 4rem;
+      font-size: 2rem; }
+      .section-map-form__form-input:last-child {
+        height: 12rem;
+        padding-bottom: 9rem; }
+
+.input-first {
+  margin: 0;
+  display: inline-block;
+  width: 20%;
+  margin-left: 1.3rem; }
+
+.input-second {
+  display: inline-block;
+  width: 70%;
+  margin-left: 2.3rem; }
+
+/*# sourceMappingURL=style.css.map */

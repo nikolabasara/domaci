@@ -1,0 +1,408 @@
+@import "variables";
+@import "mixins";
+* {
+    margin: 0;
+    pad: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    width: 100%;
+    font-size: 0;
+    &__box {
+        height: 6rem;
+        background-color: $color-orange;
+        &-location {
+            text-decoration: none;
+            @include header-setups;
+        }
+        &-text {
+            position: relative;
+            font-weight: 400;
+            @include header-setups;
+            &::after {
+                content: "";
+                width: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 2px;
+                border-bottom: 1px solid $color-white;
+            }
+        }
+    }
+    &__menu {
+        min-height: 6rem;
+        background-color: $color-blue-dark;
+        &-list {
+            list-style: none;
+            padding: 0;
+            &>* {
+                color: $color-white;
+                font-size: 1.4rem;
+                text-align: center;
+                padding: 2rem;
+            }
+        }
+    }
+}
+
+.naslov {
+    width: 100%;
+    height: 20rem;
+    background-color: $color-black;
+    position: relative;
+    &__text {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &-1,
+        &-2 {
+            color: $color-white;
+            text-align: center;
+        }
+        &-1 {
+            padding: 0 5rem;
+            font-size: 4.7rem;
+        }
+        &-2 {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+    }
+}
+
+.filterbtns {
+    width: 100%;
+    height: 10rem;
+    position: relative;
+    text-align: center;
+    &__row {
+        // background-color: red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 6rem;
+        width: 95%;
+        &-btn {
+          
+            display: inline;
+            font-size: 1.4rem;
+            color: $color-grey;
+            border: 1px solid $color-grey;
+            padding: 1.3rem;
+            border-radius: 5rem;
+            margin: 1rem;
+            line-height: 6rem;
+        }
+    }
+}
+
+.section__offers {
+    background-color: $color-grey-light;
+    min-height: 30rem;
+    width: 100%;
+    .offers {
+        padding: 3rem 2.5rem;
+        &__element {
+            width: 100%;
+            height: 28rem;
+            margin-top: 3rem;
+            overflow: hidden;
+            position: relative;
+            &-img {
+                width: 100%;
+            }
+            &-opac {
+                width: 100%;
+                height: 45%;
+                background-color: rgba($color-grey-light, .7);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &-opac>* {
+                font-size: 2.2rem;
+                margin-top: 2rem;
+                margin-left: 2rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.section-pricing {
+    width: 100%;
+    height: 30rem;
+    text-align: center;
+    position: relative;
+    &__naslov-1 {
+        // color: $color-grey;
+        font-size: 3.5rem;
+        margin-top: 3rem;
+        font-weight: 800;
+    }
+    &__naslov-2 {
+        font-size: 1.6rem;
+        margin-top: 7rem;
+    }
+    &__btn {
+        width: 24rem;
+        height: 7rem;
+        color: $color-grey;
+        border: 1px solid $color-grey;
+        padding: 1.5rem;
+        border-radius: 4rem;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &-text {
+            font-size: 2rem;
+            line-height: 4rem;
+        }
+    }
+  
+}
+
+.section-map-form {
+    background-color: $color-grey-light;
+    min-height: 30rem;
+    width: 100%;
+    padding-bottom: 3rem;
+    &__text {
+        text-align: center;
+        font-size: 3.5rem;
+        padding: 5rem 0;
+        font-weight: 800;
+    }
+    &__map {
+        width: 80%;
+        min-height: 8rem;
+        margin: 0 10%;
+        iframe {
+            width: 100%;
+            height: 50rem;
+            display: inline-block;
+        }
+    }
+    &__form {
+        width: 95%;
+        min-height: 43rem;
+        background-color: $color-orange;
+        margin: 0 auto;
+        margin-top: 3rem;
+        padding-top: 1rem;
+        &-input {
+            display: block;
+            width: 95%;
+            margin: 3rem auto;
+            height: 5rem;
+            font-size: 2rem;
+            &:last-child {
+                height: 12rem;
+                padding-bottom: 9rem; // margin-bottom: 9rem;
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 5rem;
+    background-color: $color-blue-dark;
+    color: $color-white;
+    text-align: center;
+    line-height: 5rem;
+    &__paragraph {
+        font-size: 1.4rem;
+        span {
+            font-size: 1.4rem;
+            color: $color-orange;
+        }
+    }
+}
+
+// M
+// E
+// D
+// I
+// A
+@media only screen and (min-width:640px) {
+    .header {
+        width: 100%;
+        font-size: 0;
+        &>* {
+            display: inline-block;
+            vertical-align: top;
+        }
+        &__box {
+            width: 20%;
+        }
+        &__menu {
+            width: 80%;
+            &-list>* {
+                display: inline-block;
+            }
+        }
+    }
+    .naslov {
+        width: 100%;
+        height: 85vh;
+        background-image: url("../slike/intro.jpg");
+        background-size: cover;
+        &__text {
+            position: absolute;
+            top: 77%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            background-color: rgba( $color-black, .5);
+        }
+    }
+}
+
+.filterbtns {
+//    /text-align: right;
+  
+  
+}
+
+.section__offers {
+    .offers {
+        padding: 3rem 2.5rem;
+        margin: 3rem 10rem;
+        &__element {
+            display: inline-block;
+            width: 23rem;
+            height: 28rem;
+            margin-left: 3rem;
+            position: relative;
+            &:hover .offers__element-opac {
+                display: block;
+                width: 100%;
+                height: 45%;
+                background-color: rgba($color-grey-light, .7);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &-opac {
+                display: none;
+            }
+        }
+    }
+}
+
+.section-pricing {
+    width: 100%;
+    height: 30rem;
+    text-align: center;
+    position: relative;
+    &__naslov-1 {
+        font-size: 3.5rem;
+        margin-top: 3rem;
+        font-weight: 800;
+    }
+    &__naslov-2 {
+        font-size: 1.6rem;
+        margin-top: 7rem;
+    }
+    &__btn {
+        display: none;
+    }
+    &__table tr td {
+        color: $color-white;
+        width: 8rem;
+        height: 2.5rem;
+        font-size: 1.3rem;
+    }
+}
+
+.orangebck {
+    background-color: $color-orange;
+    border: 1px solid $color-grey;
+}
+
+.bluebck {
+    background-color: $color-blue-dark;
+    border: 1px solid $color-grey;
+}
+
+.bordbluedark {
+    border: 1px solid $color-blue-dark;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+table td.greytext {
+    border: 1px solid $color-grey;
+    color: $color-grey;
+}
+
+.pricbck {
+    border: 1px solid $color-orange;
+}
+
+.section-map-form {
+    background-color: $color-grey-light;
+    min-height: 30rem;
+    width: 100%;
+    padding-bottom: 3rem;
+    &__text {
+        text-align: center;
+        font-size: 3.5rem;
+        padding: 5rem 0;
+        font-weight: 800;
+    }
+    &__map {
+        display: inline-block;
+        width: 30%;
+        height: 40rem;
+        margin: 0 10%;
+        vertical-align: top;
+        iframe {
+            width: 100%;
+            height: 40rem; // display: inline-block;
+        }
+    }
+    &__form {
+        display: inline-block;
+        width: 40%;
+        height: 40rem;
+        background-color: $color-orange;
+        margin: 0 auto;
+        padding-top: 1rem;
+        vertical-align: top;
+        &-input {
+            display: block;
+            width: 95%;
+            margin: 3rem auto;
+            height: 4rem;
+            font-size: 2rem;
+            &:last-child {
+                height: 12rem;
+                padding-bottom: 9rem; // margin-bottom: 9rem;
+            }
+        }
+    }
+}
+
+.input-first {
+    margin: 0;
+    display: inline-block;
+    width: 20%;
+    margin-left: 1.3rem;
+}
+
+.input-second {
+    display: inline-block;
+    width: 70%;
+    margin-left: 2.3rem;
+}
